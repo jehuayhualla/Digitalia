@@ -16,11 +16,11 @@ const Card = ({ title, description, backgroundImage, height = undefined, backgro
   const screenHeight = Dimensions.get('window').height;
 
   return (
-    <Container style={{ height: height ?? screenHeight * 0.2, backgroundColor: backgroundColor }}>
-      {backgroundImage && <BackgroundImage source={{ uri: backgroundImage }} resizeMode="cover" />} 
+    <Container testID="container" style={{ height: height ?? screenHeight * 0.2, backgroundColor: backgroundColor }}>
+      {backgroundImage && <BackgroundImage testID="background-image" source={{ uri: backgroundImage }} resizeMode="cover" />} 
       <Content>
-        <Title style={{ color: titleColor ?? '#fff' }} >{title}</Title>
-          {description && <Description style={{ color: descriptionColor ?? '#fff' }} >{description}</Description>} 
+        <Title testID="title" style={{ color: titleColor ?? '#fff' }} >{title}</Title>
+          {description && <Description testID="description" style={{ color: descriptionColor ?? '#fff' }} >{description}</Description>} 
       </Content>
     </Container>
   );

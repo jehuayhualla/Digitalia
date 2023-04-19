@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 
 const Spinner = () => {
   return (
-    <Container>
+    <Container testID='spinner'>
       <Loader />
     </Container>
   );

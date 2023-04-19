@@ -1,5 +1,5 @@
 import Card from "../Card";
-import { Gesture, LongPressGestureHandler, State } from "react-native-gesture-handler";
+import { Gesture } from "react-native-gesture-handler";
 import { CardProps } from "../Card/Card";
 import { GestureDetector } from "react-native-gesture-handler";
 
@@ -14,7 +14,7 @@ export default function LongTouchCard(props: LongTouchCardProps) {
   });
 
   return (
-    <GestureDetector gesture={longPressGestureHandler} >
+    <GestureDetector  gesture={longPressGestureHandler} >
       <Card {...props} />
     </GestureDetector>
   );

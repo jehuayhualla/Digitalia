@@ -30,14 +30,14 @@ const AddCardButton = ({ onAddCard }: AddCardButtonProps) => {
 
   return (
     <>
-      <Container onPress={handlePress}>
+      <Container testID="add-button" onPress={handlePress}>
         <Text>+</Text>
       </Container>
-      <Modal visible={showModal} animationType="slide" onRequestClose={handleModalClose}>
+      <Modal testID="modal" visible={showModal} animationType="slide" onRequestClose={handleModalClose}>
         <ModalContainer>
-          <TextInput placeholder="Enter card title" value={cardTitle} onChangeText={handleTextChange} />
+          <TextInput testID="input" placeholder="Enter card title" value={cardTitle} onChangeText={handleTextChange} />
           <ButtonContainer>
-            <Button onPress={handleAddCard}>
+            <Button testID="add-card-button" onPress={handleAddCard}>
               <ButtonText>Add</ButtonText>
             </Button>
             <Button onPress={handleModalClose}>
